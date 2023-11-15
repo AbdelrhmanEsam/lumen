@@ -1,0 +1,827 @@
+{
+	"info": {
+		"_postman_id": "dbf0bd93-4a77-4d45-96da-7ccbda670e23",
+		"name": "Lumen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17924445",
+		"_collection_link": "https://orange-star-386293.postman.co/workspace/My-Workspace~9b3b33be-85be-4afa-896d-0b038f6a5394/collection/17924445-dbf0bd93-4a77-4d45-96da-7ccbda670e23?action=share&source=collection_link&creator=17924445"
+	},
+	"item": [
+		{
+			"name": "services",
+			"item": [
+				{
+					"name": "Show All Services",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA0MDg0MSwiZXhwIjoxNzAwMDQ0NDQxLCJuYmYiOjE3MDAwNDA4NDEsImp0aSI6ImRzQkRnSGRXWjc0UkhUNzkiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.5C979UdZTb6CFu8EbAONr13C02rTqus-1PelTp4nQ7A"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/services"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA0MDg0MSwiZXhwIjoxNzAwMDQ0NDQxLCJuYmYiOjE3MDAwNDA4NDEsImp0aSI6ImRzQkRnSGRXWjc0UkhUNzkiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.5C979UdZTb6CFu8EbAONr13C02rTqus-1PelTp4nQ7A"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "six card",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "loream for fifth card service",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/steam-vue/src/assets/images/our-fields-3.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/service",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"service"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Service",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA0MDg0MSwiZXhwIjoxNzAwMDQ0NDQxLCJuYmYiOjE3MDAwNDA4NDEsImp0aSI6ImRzQkRnSGRXWjc0UkhUNzkiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.5C979UdZTb6CFu8EbAONr13C02rTqus-1PelTp4nQ7A"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "seven Card",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "loream for seven card service",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/services/show/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"services",
+								"show",
+								"11"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA0MDg0MSwiZXhwIjoxNzAwMDQ0NDQxLCJuYmYiOjE3MDAwNDA4NDEsImp0aSI6ImRzQkRnSGRXWjc0UkhUNzkiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.5C979UdZTb6CFu8EbAONr13C02rTqus-1PelTp4nQ7A"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "seven Card 1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "loream for seven card service 1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/steam-vue/src/assets/images/head-bg-1.jpg"
+								},
+								{
+									"key": "id",
+									"value": "11",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/service/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"service",
+								"update"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Services",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA0MDg0MSwiZXhwIjoxNzAwMDQ0NDQxLCJuYmYiOjE3MDAwNDA4NDEsImp0aSI6ImRzQkRnSGRXWjc0UkhUNzkiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.5C979UdZTb6CFu8EbAONr13C02rTqus-1PelTp4nQ7A"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8000/services/11"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Home Page services",
+			"item": [
+				{
+					"name": "Show All Services",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA1MDIwMSwiZXhwIjoxNzAwMDUzODAxLCJuYmYiOjE3MDAwNTAyMDEsImp0aSI6IjMwYjhxeFJWRDZDSEJuTTIiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.sEhc7Wjg0pvmiujJwXiZjDltmqgrzNvyjGdaqwjaxZI"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/home_services"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA1MDIwMSwiZXhwIjoxNzAwMDUzODAxLCJuYmYiOjE3MDAwNTAyMDEsImp0aSI6IjMwYjhxeFJWRDZDSEJuTTIiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.sEhc7Wjg0pvmiujJwXiZjDltmqgrzNvyjGdaqwjaxZI"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "first card",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "loream for first card service",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/steam-vue/src/assets/images/our-fields-3.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/home_service",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"home_service"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Service",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA1MDIwMSwiZXhwIjoxNzAwMDUzODAxLCJuYmYiOjE3MDAwNTAyMDEsImp0aSI6IjMwYjhxeFJWRDZDSEJuTTIiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.sEhc7Wjg0pvmiujJwXiZjDltmqgrzNvyjGdaqwjaxZI"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "seven Card",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "loream for seven card service",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/home_services/show/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"home_services",
+								"show",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA0MDg0MSwiZXhwIjoxNzAwMDQ0NDQxLCJuYmYiOjE3MDAwNDA4NDEsImp0aSI6ImRzQkRnSGRXWjc0UkhUNzkiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.5C979UdZTb6CFu8EbAONr13C02rTqus-1PelTp4nQ7A"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "seven Card 1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "loream for seven card service 1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/steam-vue/src/assets/images/head-bg-1.jpg"
+								},
+								{
+									"key": "id",
+									"value": "11",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/service/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"service",
+								"update"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Services",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA0MDg0MSwiZXhwIjoxNzAwMDQ0NDQxLCJuYmYiOjE3MDAwNDA4NDEsImp0aSI6ImRzQkRnSGRXWjc0UkhUNzkiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.5C979UdZTb6CFu8EbAONr13C02rTqus-1PelTp4nQ7A"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8000/services/11"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jobs",
+			"item": [
+				{
+					"name": "Show All Jobs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA0MDg0MSwiZXhwIjoxNzAwMDQ0NDQxLCJuYmYiOjE3MDAwNDA4NDEsImp0aSI6ImRzQkRnSGRXWjc0UkhUNzkiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.5C979UdZTb6CFu8EbAONr13C02rTqus-1PelTp4nQ7A"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/services"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA0MDg0MSwiZXhwIjoxNzAwMDQ0NDQxLCJuYmYiOjE3MDAwNDA4NDEsImp0aSI6ImRzQkRnSGRXWjc0UkhUNzkiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.5C979UdZTb6CFu8EbAONr13C02rTqus-1PelTp4nQ7A"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "fifth card",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "loream for fifth card service",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/steam-vue/src/assets/images/our-fields-3.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/service",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"service"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Job",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA0OTc0NywiZXhwIjoxNzAwMDUzMzQ3LCJuYmYiOjE3MDAwNDk3NDcsImp0aSI6IlZBMENwdDk4Q0h6NzYwUzciLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.YQnF-r_zaZLHGH7jkHlopBJTibPn_kYfHUHv5GVQvlw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "seven Card",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "loream for seven card service",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/steam-vue/src/assets/images/our-fields-1.png",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/job/show/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"job",
+								"show",
+								"2"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA0NTk4MCwiZXhwIjoxNzAwMDQ5NTgwLCJuYmYiOjE3MDAwNDU5ODAsImp0aSI6IjZPTEFtQkFGM0F5OWRLcTIiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.S7f8_J4AChpVPmINHml7A65r8VTZLW09XnLyQ3NH0oQ"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Php",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "loream for php",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "part time",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "remote",
+									"value": "remotly",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/job/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"job",
+								"update"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA0NTk4MCwiZXhwIjoxNzAwMDQ5NTgwLCJuYmYiOjE3MDAwNDU5ODAsImp0aSI6IjZPTEFtQkFGM0F5OWRLcTIiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.S7f8_J4AChpVPmINHml7A65r8VTZLW09XnLyQ3NH0oQ"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://localhost:8000/job/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Images",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA1MDIwMSwiZXhwIjoxNzAwMDUzODAxLCJuYmYiOjE3MDAwNTAyMDEsImp0aSI6IjMwYjhxeFJWRDZDSEJuTTIiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.sEhc7Wjg0pvmiujJwXiZjDltmqgrzNvyjGdaqwjaxZI"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/thakaa task/assets/Pic4.jpg"
+								}
+							]
+						},
+						"url": "http://localhost:8000/job_images"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA1MDIwMSwiZXhwIjoxNzAwMDUzODAxLCJuYmYiOjE3MDAwNTAyMDEsImp0aSI6IjMwYjhxeFJWRDZDSEJuTTIiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.sEhc7Wjg0pvmiujJwXiZjDltmqgrzNvyjGdaqwjaxZI"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8000/job_images/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDAzMjAzOCwiZXhwIjoxNzAwMDM1NjM4LCJuYmYiOjE3MDAwMzIwMzgsImp0aSI6IkF3VUcyemxrT2RWV0V5dzQiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9._Gykl7Q2OJSJmYjBC-Ymdoh2ca-Av_HC3g0luic2aZg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/test"
+			},
+			"response": []
+		},
+		{
+			"name": "All Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDAzMjQ1MiwiZXhwIjoxNzAwMDM2MDUyLCJuYmYiOjE3MDAwMzI0NTIsImp0aSI6InYycDluTHNPSTBGNmlUWlAiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.K8PXdk3rqBLsWLCW5GoC_GxqgY4rUqv6d1-Aitg-aig"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/users"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "admin@test.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8000/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Contact Us msg",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA1MjY4NSwiZXhwIjoxNzAwMDU2Mjg1LCJuYmYiOjE3MDAwNTI2ODUsImp0aSI6IjVKV3ZrWUx3VlZmdW5jaXkiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.3GgmDFOsnvBbTOr8foPp4X2K4Awv_43RtYUcXs1ifPA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/contact_us"
+			},
+			"response": []
+		},
+		{
+			"name": "Add msg in Contact Us",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXV0aC9sb2dpbiIsImlhdCI6MTcwMDA1MjY4NSwiZXhwIjoxNzAwMDU2Mjg1LCJuYmYiOjE3MDAwNTI2ODUsImp0aSI6IjVKV3ZrWUx3VlZmdW5jaXkiLCJzdWIiOiIzIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.3GgmDFOsnvBbTOr8foPp4X2K4Awv_43RtYUcXs1ifPA"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "abdo",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "abdo@test.com",
+							"type": "text"
+						},
+						{
+							"key": "your_massage",
+							"value": "hellllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllo",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8000/contact_us"
+			},
+			"response": []
+		}
+	]
+}
