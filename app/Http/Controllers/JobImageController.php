@@ -15,7 +15,11 @@ class JobImageController extends Controller
      */
     public function index()
     {
-        //
+        $msg = 'All Images' ;
+        $status = true;
+        $data =  JobImage::all();
+
+        return ResponseBuilder::result($msg , $status , $data);
     }
 
     /**
@@ -31,26 +35,89 @@ class JobImageController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
-        $job = new JobImage;
 
-        if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
-            $image->move(app()->basePath('public/images/job'), $imageName);
-            $job->image = $imageName;
+        // $job = new JobImage;
+        // if ($request->hasFile('image')) {
+        //     $image = $request->file('image');
+        //     $imageName = rand(99999, 9999999) . time() . '.' . $image->getClientOriginalExtension();
+        //     $image->move(app()->basePath('public/images/job'), $imageName);
+        //     $job->image = $imageName;
+        //  }
+        //  $job->save();
+        // if($job){
+        //     $msg = ('Added successfully');
+        //     $status = true;
+        // }else{
+        //     $msg = ('Somthing Error');
+        //     $status = false;
+        // }
+        // $data = $request->all();
+        // return ResponseBuilder::result($msg , $status , $imageName);
+
+
+
+
+        // $job = new JobImage;
+        // if ($request->hasFile('image')) {
+        //     $image = $request->file('image');
+        //     $imageName = time() . '.' . $image->getClientOriginalExtension();
+        //     $image->store('public/team') ;
+        //     $job->image = $imageName;
+        //  }
+
+        // $ImageName = "";
+
+        // if ($request->hasfile('image')) {
+		// 	//videos file
+		// 	$ImageName = rand(99999, 9999999) . time() . '.' . $request->image->getClientOriginalExtension();
+		// 	$request->image->move(base_path('uploads/photos'), $ImageName);
+		// }
+
+        // if ($request->hasfile('files')) {
+ 		// 	foreach ($request->file('files') as $file) {
+ 		// 		$name = $file->getClientOriginalName();
+		// 		$extention = $file->getClientOriginalExtension();
+		// 		$imageName = rand(9999, 999999) . time() . "_albums" . '.' . $file->getClientOriginalExtension();
+		// 		$file->move(base_path('uploads/photos/albums'), $imageName);
+ 		// 		JobImage::create([
+		// 			'image' =>  $imageName,
+ 		// 		]);
+		// 	}
+		// }
+
+        $ImageName = "";
+
+        if ($request->hasfile('image')) {
+            //videos file
+            $ImageName = rand(99999, 9999999) . time() . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(app()->basePath('public/storage/photos'), $ImageName);
         }
 
-        $job->save();
+         $jobs = JobImage::create([
 
-        if($job){
-            $msg = ('Added successfully');
-            $status = true;
-        }else{
-            $msg = ('Somthing Error');
-            $status = false;
-        }
-        $data = $request->all();
-        return ResponseBuilder::result($msg , $status , $data);
+            'image' => $ImageName,
+         ]);
+
+         return response()->json([
+            'message' => 'Photos Save Successfully!!',
+            'photos' => $jobs,
+        ]);
+        // $path = $request->file('image')->store('images');
+        // $job = new JobImage;
+        // $job->image = request()->file('image')->store('team');
+        // $job->save();
+        // return response()->json(['path' => $job]);
+
+
+        // if($job){
+        //     $msg = ('Added successfully');
+        //     $status = true;
+        // }else{
+        //     $msg = ('Somthing Error');
+        //     $status = false;
+        // }
+        // $data = $request->all();
+        // return ResponseBuilder::result($msg , $status , $data);
     }
 
     /**

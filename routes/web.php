@@ -1,7 +1,13 @@
 <?php
 
 /** @var \Laravel\Lumen\Routing\Router $router */
-
+$router->get('/storage/{file}', function ($file) {
+    $path = storage_path("app/public/{$file}");
+    if (file_exists($path)) {
+        return response()->file($path);
+    }
+    abort(404);
+});
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -44,6 +50,7 @@ $router->group(['middleware'=>"auth"], function($router){
     $router->delete('/job/{id}', 'JobController@destroy');
 
 
+    $router->get('/job_images', 'JobImageController@index');
     $router->post('/job_images', 'JobImageController@store');
     $router->delete('/job_images/{id}', 'JobImageController@destroy');
 
